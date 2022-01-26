@@ -25,7 +25,7 @@ abstract class BaseDataSource {
 
             return error("Something went wrong")
         } catch (e: Exception) {
-            return error(e.message!!)
+            return error("Something went wrong, check your internet connection ")
         }
     }
 

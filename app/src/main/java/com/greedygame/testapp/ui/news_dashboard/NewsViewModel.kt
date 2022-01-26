@@ -23,7 +23,7 @@ class NewsPageViewModel @Inject constructor(private val baseApplication: BaseApp
             isSuccess.value = false
             val params: MutableMap<String, String> = HashMap()
             params["q"] = "tesla"
-            params["from"] = "2021-12-25"
+            params["from"] = "2021-12-26"
             params["sortBy"] = "publishedAt"
             params["apiKey"] = API_KEY
 

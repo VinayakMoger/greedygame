@@ -24,4 +24,5 @@ class NewRepository  @Inject constructor(
             }
         )
     }
+    fun getNewsItem(id:Int) = localDataSource.getNews(id)
 }

@@ -23,6 +23,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ui.news_description.NewsDescriptionActivity"
+            android:exported="true"
+            android:theme="@style/Theme.TestApp.NoActionBar"
+            />
     </application>
 
 </manifest>

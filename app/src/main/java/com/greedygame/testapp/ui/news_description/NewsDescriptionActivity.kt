@@ -1,5 +1,8 @@
 package com.greedygame.testapp.ui.news_description
 
+/**
+ * Description page
+ */
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent

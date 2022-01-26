@@ -1,5 +1,8 @@
 package com.greedygame.testapp.di
 
+/**
+ * Dependency Injection of app Layer
+ */
 import android.content.Context
 import com.greedygame.testapp.ui.BaseApplication
 import dagger.Module

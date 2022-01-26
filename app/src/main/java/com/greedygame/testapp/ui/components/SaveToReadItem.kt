@@ -1,5 +1,8 @@
 package com.greedygame.testapp.ui.components
 
+/**
+ * Save to read item layout design (Compose)
+ */
 import android.content.Context
 import android.content.Intent
 import androidx.compose.foundation.Image

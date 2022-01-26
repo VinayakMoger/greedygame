@@ -1,5 +1,8 @@
 package com.greedygame.testapp.data.remote
-
+/**
+ * Abstraction layer of rest API call
+ * Custom class to execute rest API
+ */
 import org.json.JSONObject
 import retrofit2.Response
 

@@ -1,5 +1,7 @@
 package com.greedygame.testapp.di
-
+/**
+ * Dependency Injection of data Layer
+ */
 import android.content.Context
 import com.greedygame.testapp.BuildConfig.BASEURL
 import com.google.gson.GsonBuilder

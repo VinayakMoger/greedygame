@@ -1,5 +1,8 @@
 package com.greedygame.testapp.ui.news_description
 
+/**
+ * Business Logic implementation for news description page
+ */
 import androidx.lifecycle.viewModelScope
 import com.greedygame.testapp.data.repository.NewRepository
 import com.greedygame.testapp.data.response.Article
@@ -14,6 +17,9 @@ import javax.inject.Inject
 class NewsDescriptionViewModel@Inject constructor(private val baseApplication: BaseApplication, private val repository: NewRepository) : BaseViewModel(baseApplication){
     lateinit var article: Article
 
+    /**
+     * Get news item from room table
+     */
     fun getNewsItem(id:Int) {
         viewModelScope.launch {
             isSuccess.value = false

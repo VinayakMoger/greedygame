@@ -1,5 +1,10 @@
 package com.greedygame.testapp.ui.news_dashboard
 
+/**
+ * Dashboard Activity
+ * 'DashBoardPage' - Full dashboard Compose design implementation
+ *  'CircularIndeterminateProgressBar' - Progress indicator if isLoading state is true
+ */
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -25,7 +30,6 @@ class NewsDashboardActivity : ComponentActivity() {
             Scaffold {
                 DashBoardPage(viewModel,this@NewsDashboardActivity)
                 CircularIndeterminateProgressBar(isDisplayed = viewModel.isLoading.collectAsState().value)
-
             }
         }
     }

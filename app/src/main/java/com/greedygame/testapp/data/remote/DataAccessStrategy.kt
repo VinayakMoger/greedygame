@@ -1,5 +1,9 @@
 package com.greedygame.testapp.data.remote
 
+/**
+ * Custom function to create stream and emit the 3 states as Loading, Error/Success
+ * Return local database query result for both success and failure response (No internet connection)
+ */
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.*
 

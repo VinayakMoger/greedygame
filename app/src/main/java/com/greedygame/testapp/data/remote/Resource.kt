@@ -1,5 +1,8 @@
 package com.greedygame.testapp.data.remote
 
+/**
+ * Create 3 states for Rest API Loading, Success, Failure
+ */
 data class Resource<out T>(val status: Status, val data: T?, val message: String?) {
 
     companion object {

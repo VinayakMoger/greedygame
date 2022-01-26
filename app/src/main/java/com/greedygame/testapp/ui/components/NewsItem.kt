@@ -1,5 +1,8 @@
 package com.greedygame.testapp.ui.components
 
+/**
+ * Dashboard List item UI Design (Compose)
+ */
 import android.content.Context
 import android.content.Intent
 import androidx.compose.foundation.Image
@@ -64,6 +67,8 @@ fun NewsItem(data: Article,index:Int,viewModel:NewsPageViewModel, context: Conte
             modifier = Modifier.padding(5.dp)
         )
         Spacer(Modifier.height(10.dp))
+        Text(viewModel.convertDate(data.publishedAt!!),color=Color.Gray,fontSize = 14.sp)
+        Spacer(Modifier.height(10.dp))
 
         Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center) {
             Button(
@@ -109,6 +114,7 @@ fun NewsItem(data: Article,index:Int,viewModel:NewsPageViewModel, context: Conte
 
             }
         }
+
         Spacer(Modifier.height(10.dp))
         Divider(
             color = deviderColor,
@@ -116,5 +122,6 @@ fun NewsItem(data: Article,index:Int,viewModel:NewsPageViewModel, context: Conte
                 .fillMaxWidth()
                 .height(2.dp)
         )
+        Spacer(Modifier.height(10.dp))
     }
 }

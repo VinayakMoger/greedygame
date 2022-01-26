@@ -8,6 +8,9 @@ import com.greedygame.testapp.data.response.Article
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.StateFlow
 
+/**
+ * Room Table operation
+ */
 @Dao
 interface NewsDao {
 
@@ -19,9 +22,6 @@ interface NewsDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertAll(news: List<Article>)
-
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insert(news: Article)
 
     @Query("DELETE FROM news")
     fun deleteNews()

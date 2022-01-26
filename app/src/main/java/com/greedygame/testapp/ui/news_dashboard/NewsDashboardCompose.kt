@@ -1,5 +1,9 @@
 package com.greedygame.testapp.ui.news_dashboard
 
+/**
+ * Dashboard design implementation
+ * LazyColumn is equivalent to Recycler view
+ */
 import android.content.Context
 import android.content.Intent
 import androidx.compose.foundation.background

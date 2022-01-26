@@ -20,6 +20,10 @@ import com.greedygame.testapp.data.response.Article
 import com.greedygame.testapp.ui.theme.BgColor
 
 
+/**
+ * Description page design implementation (Compose)
+ */
+
 @Composable
 fun DescriptionCompose(viewModel: NewsDescriptionViewModel) {
     if(viewModel.isSuccess.collectAsState().value) {
@@ -41,8 +45,14 @@ fun DescriptionCompose(viewModel: NewsDescriptionViewModel) {
                         .padding(start = 20.dp,top = 20.dp),
                     horizontalAlignment = Alignment.CenterHorizontally,
                 ) {
+                    item{
+                        Text("Author : ${article.author}",color = Color.Red)
+                    }
+                    item{
+                        Spacer(Modifier.height(20.dp))
+                    }
                     item {
-                        Text(article.description!!,fontSize = 20.sp)
+                        Text(article.description!!,fontSize = 18.sp)
                     }
                 }
             }
@@ -52,9 +62,9 @@ fun DescriptionCompose(viewModel: NewsDescriptionViewModel) {
 
 @Composable
 fun ImageCard(article: Article) {
-    Surface(modifier = Modifier.fillMaxSize(), color = Color.Black) {
-        Image(painter = rememberImagePainter(article.urlToImage),contentScale = ContentScale.Crop,contentDescription = "",modifier = Modifier
-            .height(240.dp)
+    Surface(modifier = Modifier.height(240.dp), color = Color.Black) {
+        Image(painter = rememberImagePainter(article.urlToImage),contentScale = ContentScale.FillBounds,contentDescription = "",modifier = Modifier
+            .fillMaxHeight()
             .fillMaxWidth())
         Text(article.title!!,color = Color.White,fontSize = 20.sp,fontWeight = FontWeight.Bold,modifier = Modifier.padding(20.dp ))
     }

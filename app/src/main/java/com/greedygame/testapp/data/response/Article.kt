@@ -3,6 +3,9 @@ import androidx.room.Entity
 import androidx.room.Ignore
 import androidx.room.PrimaryKey
 
+/**
+ * Article Room table
+ */
 @Entity(tableName = "news")
 data class Article(
     @PrimaryKey(autoGenerate = true)

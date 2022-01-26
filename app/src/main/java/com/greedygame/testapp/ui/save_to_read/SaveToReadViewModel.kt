@@ -1,6 +1,8 @@
 package com.greedygame.testapp.ui.save_to_read
 
-import com.greedygame.testapp.data.repository.NewRepository
+/**
+ * get save to read list from Base application class
+ */
 import com.greedygame.testapp.ui.BaseApplication
 import com.greedygame.testapp.ui.BaseViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel

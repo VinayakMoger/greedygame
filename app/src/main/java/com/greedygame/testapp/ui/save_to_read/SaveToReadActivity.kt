@@ -7,6 +7,9 @@ import androidx.activity.viewModels
 import androidx.compose.material.Scaffold
 import dagger.hilt.android.AndroidEntryPoint
 
+/**
+ * Save to read page
+ */
 @AndroidEntryPoint
 class SaveToReadActivity : ComponentActivity() {
     private val viewModel: SaveToReadViewModel by viewModels()

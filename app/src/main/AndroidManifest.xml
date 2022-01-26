@@ -27,6 +27,10 @@
             android:exported="true"
             android:theme="@style/Theme.TestApp.NoActionBar"
             />
+        <activity android:name=".ui.save_to_read.SaveToReadActivity"
+            android:exported="true"
+            android:theme="@style/Theme.TestApp.NoActionBar"
+            />
     </application>
 
 </manifest>

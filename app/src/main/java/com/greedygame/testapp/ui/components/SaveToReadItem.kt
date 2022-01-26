@@ -17,16 +17,18 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.rememberImagePainter
 import com.greedygame.testapp.data.response.Article
+import com.greedygame.testapp.ui.news_dashboard.NewsPageViewModel
 import com.greedygame.testapp.ui.news_description.NewsDescriptionActivity
 import com.greedygame.testapp.ui.theme.*
 
 
 @Composable
-fun NewsItem(data: Article, context: Context) {
+fun SaveToReadItem(data: Article, context: Context) {
     Column(
         modifier = Modifier
             .padding(start = 30.dp, end = 30.dp)
@@ -45,61 +47,41 @@ fun NewsItem(data: Article, context: Context) {
         Spacer(Modifier.height(10.dp))
         Text(
             text = data.title!!,
+            maxLines = 2,
+            overflow = TextOverflow.Ellipsis,
             fontSize = 22.sp,
             fontWeight = FontWeight.Bold,
             color = black,
-            modifier = Modifier
-                .padding(5.dp)
+            modifier = Modifier.padding(5.dp)
         )
         Text(
             text = data.description!!,
             maxLines = 3,
+
+            overflow = TextOverflow.Ellipsis,
             fontSize = 16.sp,
             color = black,
-            modifier = Modifier
-                .padding(5.dp)
+            modifier = Modifier.padding(5.dp)
         )
         Spacer(Modifier.height(10.dp))
 
-        Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center) {
-            Button(
-                onClick = {
-                    val intent = Intent(context, NewsDescriptionActivity::class.java)
-                    intent.putExtra(NEWS_KEY,data.id)
-                    context.startActivity(intent)
-                },
-                colors = ButtonDefaults.buttonColors(backgroundColor = newsButtonColor),
-                modifier = Modifier
-                    .padding(horizontal = 12.dp),
-                shape = RoundedCornerShape(6.dp),
-            ) {
-                Text(
-                    text = "Read",
-                    fontSize = 18.sp,
-                    color = Color.White,
-                    modifier = Modifier.padding(horizontal = 10.dp)
-                )
-            }
-            Spacer(Modifier.width(20.dp))
-
-            Button(
-                onClick = {
-
-                },
-                colors = ButtonDefaults.buttonColors(backgroundColor = newsButtonColor),
-                modifier = Modifier
-                    .padding(horizontal = 12.dp),
-                shape = RoundedCornerShape(6.dp),
-            ) {
-                Text(
-                    text = "Save",
-                    fontSize = 18.sp,
-                    color = Color.White,
-                    modifier = Modifier.padding(horizontal = 10.dp)
-                )
-            }
-
-
+        Button(
+            onClick = {
+                val intent = Intent(context, NewsDescriptionActivity::class.java)
+                intent.putExtra(NEWS_KEY,data.id)
+                context.startActivity(intent)
+            },
+            colors = ButtonDefaults.buttonColors(backgroundColor = newsButtonColor),
+            modifier = Modifier
+                .padding(horizontal = 12.dp),
+            shape = RoundedCornerShape(6.dp),
+        ) {
+            Text(
+                text = "Read",
+                fontSize = 18.sp,
+                color = Color.White,
+                modifier = Modifier.padding(horizontal = 10.dp)
+            )
         }
         Spacer(Modifier.height(10.dp))
         Divider(
